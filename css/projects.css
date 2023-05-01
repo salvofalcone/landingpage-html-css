@@ -1,0 +1,149 @@
+.projects{
+    padding: 40px 0;
+    background-color: var(--color-dark);
+}
+
+.projects h2{
+    padding: 18px;
+}
+
+.projects__cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    width: 100%;
+    overflow-x: scroll;
+   
+}
+
+.card{
+    color: var(--color-light);
+    border: 2px solid white;
+    border-radius: 8px;
+    width: 300px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+
+}
+
+.card img{
+    width: 296px;
+    height: 250px;
+    border-radius: 8px;
+}
+
+.card__info{
+    padding: 12px;
+}
+
+
+/* square cards */
+.projects__square{
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    color: var(--color-dark);
+    height: 600px;
+
+    width: 100%;
+}
+
+.projects__square h2{
+    color: var(--color-dark);
+}
+
+.square__text{
+    width: 50%;
+    height: 600px;
+    background-color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.square__image{
+    width: 50%;
+}
+
+.square__image img{
+    height: 600px;
+    width: 100%;
+}
+
+.projects__square:nth-child(even){
+    flex-direction: row-reverse;
+
+}
+/* end square cards */
+
+
+/* media solo per smartphone */
+@media screen and (max-width:600px){
+    .projects{
+        padding-bottom: 0;
+      /*   display: flex;
+        flex-direction: column; */
+    }
+
+    .projects__cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    .main__card{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row-reverse;
+        overflow-x: scroll;
+    }
+
+    /* ho aggiunto questo perché mi appare una scrollbar perché il contenuto va fuori */
+    .card__info h3,p{
+    overflow-y: hidden;
+    }
+    /* carte quadrate */
+    .projects__square{
+        background-color: var(--color-light);
+        
+    }
+    
+    .square__image{
+        display: none;
+    }
+    
+    .square__text{
+        height: 100%;
+        width: 100vw;
+        padding: 0 30px;
+    }
+    /* end carte quadrate */
+
+  }
+
+
+  /* media tablet (mobile) */
+@media screen and (max-width: 1023px) {
+
+    .card{
+        flex-direction: column; /* da sistemare perché non funziona */
+        flex-wrap: wrap;
+    }
+
+    .square__text {
+/*         width: 60%;
+ */    }
+
+    .square__image{
+        width: 60%;
+        height: auto;
+    }
+
+
+
+}

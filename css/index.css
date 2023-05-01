@@ -1,0 +1,130 @@
+/******************************
+ hero 
+ *******************************/
+ .container {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+ 
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding-top: 120px;
+}
+
+.hero__video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.hero__video::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.hero__video video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* hero wrapper */
+.hero__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    padding-top: 120px;
+}
+
+.hero__title {
+    color: var(--color-light);
+    text-transform: uppercase;
+}
+
+.hero__title span {
+    color: var(--color-secondary);
+}
+
+.hero__description {
+    color: var(--color-light);
+    margin-bottom: 40px;
+}
+
+.hero__image{
+display: flex;
+justify-content: center;
+}
+
+.hero__image img {
+    max-width: 540px;
+    width: 50%;
+    height: auto;
+}
+
+/**** MEDIA QUERY ****/
+@media screen and (max-width: 1023px) {
+    .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    
+    .hero__wrapper{
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 20%;
+    }
+
+    .hero__text {
+        padding-top: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero__text{
+        text-align: center;
+    }
+
+    .hero__image {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .hero {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    
+    .hero__text {
+        width: 50%;
+    }
+    .hero__image {
+        width: 50%;
+    }
+}
+
+
+/* end hero wrapper */
+
+/******************************* 
+end hero 
+*******************************/

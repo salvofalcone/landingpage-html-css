@@ -1,0 +1,73 @@
+/* services da index (home) */
+.services p {
+  color: var(--color-light);
+}
+.services {
+  background-image: url("./../assets/images/aerocode/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.services__section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 40px;
+  width: 100vw;
+}
+
+
+@media screen and (max-width: 1023px) {
+  .services{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .services__section {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .services__section__text{
+    padding-bottom: 30px;
+  }
+
+  .services__section__image img{
+    width: 400px;
+    height: 300px;
+    border-radius: 8px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .services__section:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .services__section__image {
+    width: 50%;
+    padding: 20px;
+  }
+  
+  .services__section__text {
+    width: 50%;
+    padding: 20px;
+  }
+  
+  .services__section__image img {
+    width: 600px;
+    height: 500px;
+    border-radius: 8px;
+  }
+  
+}
+
+/* end services da index (home)*/
+
+@media  screen and (max-width:600px) {
+  .services__section__text h2{
+    overflow-y: hidden;
+  }
+}

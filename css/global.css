@@ -1,0 +1,188 @@
+@import "normalize.css";
+@import "colors.css";
+@import "typography.css";
+@import "services.css";
+@import "aboutus.css";
+@import "projects.css";
+
+
+/* css relativi alle cta delle pagine */
+  /* 
+    @import "./cta/aboutus.css";
+    @import "./cta/herolink.css";
+    @import "./cta/projects__square.css";
+    @import "./cta/projects__vertical.css";
+    @import "./cta/serviceslink.css";
+  */
+/* end css relativi alle cta delle pagine */
+
+
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/********  HEADER ********/
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--color-dark);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.8);
+  z-index: 9;
+}
+
+.main-header {
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+.main-header ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.main-header li {
+  position: relative;
+  padding: 10px;
+}
+
+.main-header ul a {
+  color: var(--color-light);
+  text-decoration: none;
+}
+/********  end HEADER ********/
+
+
+/* sistemare la dimensione solo per mobile */
+@media screen and (max-width:600px){
+  *{
+    overflow-x: hidden;
+  }
+  header{
+    display: none;
+  }
+
+  /* sistemare logo mettendolo più grande */
+
+  
+  .menumobile{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.132);
+    padding: 0 5px;
+    border-radius: 8px;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  
+    .menumobile{
+      display: none;
+    }
+
+  .main-header li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-secondary);
+    transition: width 0.25s ease-in-out;
+  }
+
+  .main-header li::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-secondary);
+    transition: width 0.25s ease-in-out;
+  }
+
+  .main-header li:hover::after {
+    width: 100%;
+  }
+
+  .main-header li:hover::before {
+    width: 100%;
+  }
+}
+/* end header */
+
+
+
+/********  button ********/
+.button {
+  position: relative;
+  text-decoration: none;
+  background-color: var(--color-secondary);
+  color: var(--color-dark);
+  padding: 8px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: color 0.25s ease-in-out;
+}
+
+.button span {
+  position: relative;
+  z-index: 1;
+}
+
+.button:hover {
+  color: var(--color-secondary);
+  box-shadow: 4px 4px 4px rgba(255, 255, 255, 0.583);
+  transition: 0.4s ease-in-out;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--color-primary);
+  border-radius: 8px;
+  transition: width 0.25s ease-in-out;
+}
+
+.button:hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--color-primary);
+  border-radius: 8px;
+}
+
+/********  HEADER ********/
+
+
+@media  screen and (max-width:600px) {
+  .hero__title {
+    overflow-y: hidden;
+  }
+}

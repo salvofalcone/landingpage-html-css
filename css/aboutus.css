@@ -1,0 +1,83 @@
+.aboutus{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: var(--color-secondary);
+}
+.aboutus h2{
+    padding-top: 80px; /* aggiunto per mostrare a schermo tutto il contenuto dopo aver cliccato sul link della navbar */
+    text-transform: uppercase;
+    color: var(--color-dark);
+}
+
+.aboutus__results{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 260px;
+}
+
+.aboutus__group{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.aboutus__results__numb{
+    line-height: 0;
+}
+
+.number{
+    font-size: 60px;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.what{
+    text-transform: uppercase;
+    color: var(--color-dark);
+    font-size: 32px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+
+
+.aboutus__banner{
+    background-image: url('./../assets/images/about-background.jpeg');
+}
+
+.aboutus__banner__darker{
+    background-color: rgba(0, 0, 0, 0.526);
+}
+
+
+.aboutus__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 70%;
+    margin: 0 auto;
+    color: var(--color-light);
+    
+    z-index:1;
+}
+
+
+@media screen and (max-width: 1023px) {
+    .aboutus__results{
+        height: auto;
+        flex-wrap: wrap;
+    }
+    
+    .aboutus__results p{
+        font-size: 48px;
+    }
+    
+    .aboutus__results .what{
+        font-size: 24px;
+    }
+}
+
